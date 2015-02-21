@@ -1,4 +1,5 @@
 // implements smooth scrolling. Finds the top of the corresponding section and scrolls to it.
+// cite: http://stackoverflow.com/questions/6677035/jquery-scroll-to-element
 
 function smooth_scroll()
 {
@@ -27,6 +28,7 @@ function smooth_scroll()
 }
 
 // implements shrinking navbar and position indicator. Gets the current y offset and shrinks the navbar if below 25px and highlights a navbar button in orange if within the bounds of a particular section.
+// cite: http://callmenick.com/2014/02/18/create-an-animated-resizing-header-on-scroll/
 
 function scrolls()
 {
@@ -127,6 +129,7 @@ function carousel()
 }
 
 // implements modal
+// cite: http://blog.raventools.com/create-a-modal-dialog-using-css-and-javascript/
 
 function modal()
 {
