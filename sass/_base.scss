@@ -1,13 +1,321 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:100,400);
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400);
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+
+body
+{
+	// background-color: $white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+.header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $blue;
+	z-index: 1000;
+	height: 100px;
+	overflow: hidden;
+	display: inline-block;
+	@include smallify(all 0.2s);
+	font-family: 'Titillium Web', sans-serif;
+	border-bottom-style: solid;
+	border-width: 2px;
+	border-color: rgb(255, 255, 255);
+
+	h1
+	{
+		display: inline-block;
+		font-size: 40px;
+	    font-weight: 200;
+		line-height: 100px;
+		color: $white;
+		padding: 0 24px;
+		@include smallify(all 0.2s);
+	}
+	nav
+	{
+		display: inline-block;
+		float: right;
+
+	}
+	nav a
+	{
+		font-size: 20px;
+		display: inline-block;
+		line-height: 100px;
+		padding: 0 24px;
+		text-decoration: none;
+		color: $white;
+		@include smallify(all 0.2s);
+	}
+	nav a:hover
+	{
+		background-color: $orange;
+	}
+	.lastname
+	{
+		font-weight: bold;
+	}
+}
+.header.shrink
+{
+	height: 50px;
+	line-height: 50px;
+	@include smallify(all 0.2s);
+	
+	h1
+	{
+		font-size: 25px;
+		line-height: 50px;
+		@include smallify(all 0.2s)
+	}
+	nav a
+	{
+		line-height: 50px;
+		font-size: 80%;
+		@include smallify(all 0.2s);
+	}
+}
+.back
+{
+	height: 600px;
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	z-index: -5;
+	@include gradient(7, 7, 7, 0.9, 0, "/img/mh4g.jpg");
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+
+.home
+{
+	height: 600px;
+	width: 100%;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0);
+}
+.about
+{
+	// background-color: $blue;	
+	background-color: $grey;
+	height: 700px;
+	width: 100%;
+	h1
+	{
+		color: $white;
+		padding-top: 24px;
+		text-align: center;
+		font-size: 64px;
+		font-family: 'Titillium Web', sans-serif;	
+	}
+	p
+	{
+		color: $white;
+		padding-top: 24px;
+		font-size: 32px;
+		text-align: center;
+	}
+}
+.carousel
+{
+	height: 700px;
+	width: 100%;
+	position: relative;
+	z-index: -5;
+	.object
+	{
+		height: 700px;
+		width: 100%;
+		position: absolute;
+	}
+	#object1
+	{
+		height: 700px;
+		width: 100%;
+
+	}
+	#object2
+	{
+		height: 700px;
+		width: 100%;
+
+	}
+	#object3
+	{
+		height: 700px;
+		width: 100%;
+
+	}
+	#object4
+	{
+		height: 700px;
+		width: 100%;
+	}
+}
+.projects
+{
+	height: 700px;
+	background-color: $white;	
+	width: 100%;
+	h1
+	{
+		padding-top: 24px;
+		text-align: center;
+		font-size: 64px;
+		font-family: 'Titillium Web', sans-serif;
+	}
+
+}
+.contact
+{
+	padding-top: 75px;
+	height: 700px;
+	// background-color: $grey;
+	width: 100%;
+	position: absolute;
+	h1
+	{
+		z-index: 500;
+		color: $white;
+		padding-top: 24px;
+		text-align: center;
+		font-size: 64px;
+		font-family: 'Titillium Web', sans-serif;	
+	}
+}
+
+.socialmedia
+{
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+
+    padding: 48px 24px;
+    div
+    {
+    	font-size: 35px;
+   		text-align: center;
+		color: $white;
+	    p
+	    {
+	    	font-size: 24px;
+	    }
+    }
+}
+.projectcolumns
+{
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+
+    padding: 48px 24px;
+    div
+    {
+    	height: 500px;
+    	font-size: 35px;
+   		text-align: center;
+		color: $darkgrey;
+		.title
+		{
+			// text-align: center;
+			font-size: 50px;
+		}
+	    p
+	    {
+	    	padding-top: 24px;
+	    	text-align: justify; 
+	    	font-size: 24px;
+	    }
+    }
+}
+
+.currentsection
+{
+	background-color: $grey;
+}
+
+.footer
+{
+	padding-top: 25px;
+	height: 50px;
+	background-color: $orange;
+	border-top-style: solid;
+	border-width: 2px;
+	border-color: $white;
+}
+
+#overlay
+{
+	visibility: hidden;
+	// opacity: 0;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width:100%;
+	height:100%;
+	text-align:center;
+	z-index: 1000;
+	background-color: rgba(64,64,64,0.9);
+	div 
+	{
+		// opacity: 0;
+		height: 500px;
+		width: 100%;
+		margin: 100px auto;
+		background-color: $darkgrey;
+		padding:15px;
+		text-align:center;
+	}
+}
+
+#car_buttons
+{
+	width: 100%;	
+	height: 700px;
+	line-height: 700px;
+	position: absolute;
+	font-size: 48px;
+	color: $white;
+	#lb
+	{
+		padding: 0px 24px;
+		display: inline-block;
+		
+	}
+	#rb
+	{
+		display: inline-block;
+		// height: 700px;
+		// line-height: 700px;
+		// position: absolute;
+		// font-size: 48px;
+		// color: $white;
+		float: right;
+		padding: 0px 24px;
+
+	}
+	#lb:hover
+	{
+		background-color: rgba(255,255,255,0.5);
+	}
+	#rb:hover
+	{
+		background-color: rgba(255,255,255,0.5);
+
+	}
+	
 }
